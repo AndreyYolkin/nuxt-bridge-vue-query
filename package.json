@@ -1,0 +1,20 @@
+{
+  "name": "nuxt-bridge-fonts-vite",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxi dev",
+    "build": "nuxi build",
+    "start": "nuxi preview",
+    "generate": "nuxi generate"
+  },
+  "dependencies": {
+    "@fontsource/inter": "^4.5.12",
+    "core-js": "^3.19.3",
+    "nuxt-edge": "^2.16.0-27616340.013f051b",
+    "vue": "^2.7.9"
+  },
+  "devDependencies": {
+    "@nuxt/bridge": "npm:@nuxt/bridge-edge@^3.0.0-27719140.5e5fa50"
+  }
+}
