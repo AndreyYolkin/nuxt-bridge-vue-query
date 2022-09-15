@@ -5,24 +5,27 @@ import {
   dehydrate,
 } from 'vue-query'
 
+import { useState } from '#app'
+
 export default defineNuxtPlugin((nuxt) => {
   // Modify your Vue Query global settings here
   const queryClient = new QueryClient({
-    defaultOptions: { queries: { staleTime: 1000 } },
+    defaultOptions: { queries: { staleTime: 5000 } },
   })
   const options = { queryClient }
 
   nuxt.vueApp.use(VueQueryPlugin, options)
+  const vueQueryClient = useState('vue-query')
 
   if (process.server) {
     nuxt.hooks.hook('app:rendered', () => {
-      nuxt.nuxtState['vue-query'] = dehydrate(queryClient)
+      vueQueryClient.value = dehydrate(queryClient)
     })
   }
 
   if (process.client) {
     nuxt.hooks.hook('app:created', () => {
-      hydrate(queryClient, nuxt.nuxtState['vue-query'])
+      hydrate(queryClient, vueQueryClient.value)
     })
   }
 })
