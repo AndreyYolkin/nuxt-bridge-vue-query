@@ -16,6 +16,9 @@ export default defineNuxtConfig({
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
+  plugins: [
+    '@/plugins/vue-query.js'
+  ],
   bridge: {
     vite: true
   }

@@ -1,7 +1,12 @@
 {
-  "name": "nuxt-bridge-fonts-vite",
+  "name": "nuxt-bridge-vue-query-vite",
   "version": "1.0.0",
   "private": true,
+  "overrides": {
+    "@nuxt/vue-app-edge": {
+      "vue-router": "3.6.5"
+    }
+  },
   "scripts": {
     "dev": "nuxi dev",
     "build": "nuxi build",
@@ -15,6 +20,7 @@
     "vue": "^2.7.9"
   },
   "devDependencies": {
-    "@nuxt/bridge": "npm:@nuxt/bridge-edge@^3.0.0-27719140.5e5fa50"
+    "@nuxt/bridge": "npm:@nuxt/bridge-edge@^3.0.0-27719140.5e5fa50",
+    "vue-query": "^2.0.0-beta.10"
   }
 }

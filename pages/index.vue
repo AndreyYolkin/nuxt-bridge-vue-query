@@ -1,6 +1,7 @@
 <template>
   <div>
     <h1>Init</h1>
+    <nuxt-link to="/vueQuery">To VueQuery page</nuxt-link>
   </div>
 </template>
 
