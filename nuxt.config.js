@@ -17,7 +17,7 @@ export default defineNuxtConfig({
     ]
   },
   plugins: [
-    '@/plugins/vue-query.js'
+    '~/plugins/vue-query.js'
   ],
   bridge: {
     vite: true
