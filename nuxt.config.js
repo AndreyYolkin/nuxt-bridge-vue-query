@@ -2,7 +2,7 @@ import { defineNuxtConfig } from '@nuxt/bridge'
 
 export default defineNuxtConfig({
   head: {
-    title: 'nuxt-bridge-fonts',
+    title: 'nuxt-bridge-vue-query',
     htmlAttrs: {
       lang: 'en'
     },
